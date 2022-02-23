@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            border: none;
+        }
+
+        .header-first-box {
+            background-color: #f5f5f5;
+            height: 35px;
+
+
+        }
+
+        .header-nav-first {
+            width: 1460px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .nav-first-left {
+            display: block;
+            width: 120px;
+            font-size: 12px;
+            line-height: 35px;
+            padding: 0 11px 0 24px;
+            margin-right: 0;
+        }
+
+        .icon-coordinate {
+            width: 11px;
+            height: 15px;
+            left: 5px;
+            top: 9px;
+            background-position: -192px -180px;
+        }
+
+        
+
+        /* 精灵图 */
+        .icon {
+            position: absolute;
+            background-image: url(./img/common_bg_s.png);
+            background-repeat: no-repeat;
+            font-size: 0;
+        }
+
+        .city-switchover span {
+            font-family: "Source Han Sans SC", "HanHei SC", "PingFang SC", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+            cursor: pointer;
+        }
+
+        .nav-city {
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .nav-change {
+            color: #0cb46a;
+        }
+
+        .nav-first-right {
+            width: 756px;
+            height: 35px;
+            line-height: 35px;
+            font-size: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+        }
+
+        .nav-first-right .nav-first-login {
+            width: 24px;
+            font-size: 12px;
+            padding: 0 10px 0 14px;
+        }
+
+        .nav-first-right .nav-first-reg {
+            width: 24px;
+            font-size: 12px;
+            padding: 0 14px;
+        }
+
+        .nav-first-right a {
+            display: inline-block;
+            height: 35px;
+            font-size: 12px;
+            padding: 0 14px;
+        }
+
+        .nav-my-tubatu {
+            display: inline-block;
+            width: 102px;
+            height: 35px;
+            cursor: pointer;
+            position: relative;
+            font-size: 12px;
+        }
+
+        .icon-arrow-bottom {
+            margin: 14px 3px 0 5px;
+            width: 10px;
+            height: 7px;
+            display: inline-block;
+            background-position: -189px -232px;
+        }
+
+        .nav-my-tubatu-title {
+            width: 74px;
+            color: #999;
+            padding: 0 14px;
+            height: 35px;
+            font-size: normal;
+        }
+
+        .merchant-center {
+            display: inline-block;
+            width: 92px;
+            height: 35px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .merchant-center-title,
+        .building-center-title {
+            width: 64px;
+            padding: 0 14px;
+            color: #999;
+            font-style: normal;
+        }
+
+        .building-center {
+            width: 92px;
+            height: 35px;
+            display: inline-block;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .cut-line-right {
+            right: 0;
+            top: 10px;
+            display: inline-block;
+            width: 1px;
+            height: 12px;
+            background-color: #dcdcdc;
+        }
+
+        .nav-first-phone {
+            font-size: 12px;
+            margin-left: 30px;
+            color: #ff5a00;
+            cursor: pointer;
+        }
+
+        .nav-first-phone .phone-underline {
+            border-bottom: 1px solid #ff5a00;
+        }
+
+        .tel-arrow {
+            margin: 14px 3px 0 5px;
+            width: 10px;
+            height: 7px;
+            display: inline-block;
+            background-position: -189px -232px;
+        }
+
+        .icon-phone {
+            right: 152px;
+            top: 11px;
+            width: 13px;
+            height: 13px;
+            background-position: -189px -246px;
+        }
+
+        .nav-first-login:hover {
+            color: #0cb46a;
+        }
+
+        .nav-first-reg:hover {
+            color: #0cb46a;
+        }
+
+        .bottom-thread:hover {
+            color: #0cb46a;
+        }
+
+        /* 土巴兔 */
+        .header-nav-content {
+            height: 80px;
+            background-color: #fff;
+        }
+
+        .header-nav-box {
+            height: 80px;
+            width: 1460px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .nav-content-left {
+            margin-top: 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .tu8tu-logo-box {
+            float: left;
+            width: 289px;
+            height: 51px;
+        }
+
+        .tu8tu-logo-box a {
+            float: left;
+        }
+
+        .header-logo {
+            width: 132px;
+            height: 47px;
+            background-position: 0 -208px;
+            position: relative;
+            float: left;
+        }
+
+        .tu8tu-logo-box a.ad-rabbit {
+            width: 157px;
+            height: 51px;
+            overflow: hidden;
+        }
+
+        .header-logo-gif {
+            width: 125px;
+            height: 51px;
+            margin: 1px 0 0 12px;
+        }
+
+        img {
+            border: 0;
+        }
+
+        .nav-content-center {
+            position: relative;
+            width: 766px;
+            margin-left: 360px;
+        }
+
+        .nav-content-list {
+            height: 80px;
+            text-align: center;
+        }
+
+        ul,
+        ol,
+        dl {
+            list-style: none;
+        }
+
+        .nav-content-list li {
+            height: 58px;
+            padding-top: 22px;
+            margin-right: 30px;
+            position: relative;
+            float: left;
+            cursor: pointer;
+            padding: 21px 16px 0;
+        }
+
+        .nav-content-list li a {
+            height: 38px;
+            line-height: 38px;
+            font-size: 16px;
+            display: block;
+            position: relative;
+            color: #333;
+        }
+
+        .nav-content-list li.on a {
+            padding-bottom: 1px;
+            border-bottom: 2px solid #0cb46a;
+            color: #0cb46a;
+        }
+
+        .nav-content-list .hava-arrow {
+            margin-right: 29px;
+            padding-right: 15px;
+        }
+
+        .icon-arrow {
+            top: 16px;
+            right: -15px;
+            background-position: -152px -180px;
+            position: absolute;
+            width: 8px;
+            height: 5px;
+        }
+
+        .nav-content-list .last-li {
+            position: relative;
+            margin-right: 0;
+        }
+
+        .icon-app {
+            top: 10px;
+            position: absolute;
+            right: -19px;
+            width: 11px;
+            height: 16px;
+            background-position: -176px -180px;
+        }
+
+        .nav-content-right {
+            height: 79px;
+            position: absolute;
+            right: 10px;
+            top: 0;
+        }
+
+        form {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-content-search-center {
+            height: 34px;
+            margin-top: 22px;
+            position: relative;
+            border: 1px solid #e5e5e5;
+        }
+
+        .nav-search-input {
+            position: relative;
+            margin-right: 32px;
+            font-size: 0;
+            overflow: hidden;
+        }
+
+        .nav-search-input input {
+            width: 216px;
+            height: 34px;
+            outline: none;
+        }
+
+        .nav-search-center-input {
+            width: 216px;
+            padding: 9px 0 9px 8px;
+            margin: 0;
+            box-sizing: content-box;
+            height: 14px;
+            border: 0;
+        }
+
+        .icon-search {
+            right: 10px;
+            top: 7px;
+            width: 21px;
+            height: 20px;
+            background-position: -205px -219px;
+            cursor: pointer;
+        }
+        .header-nav .nav-search-center-text {
+            cursor: text;
+        }
+        .index-banner {
+            position: relative;
+            width: 1460px;
+            height: 460px;
+        }
+
+        .index-banner .arrow-left {
+            left: 1px;
+        }
+
+        .index-banner .arrow-left,
+        .index-banner .arrow-right {
+            visibility: hidden;
+            position: absolute;
+            top: 50%;
+            z-index: 2;
+            margin-top: -46px;
+            width: 60px;
+            height: 92px;
+            background-color: #333;
+
+        }
+
+        /* 登录注册页面 */
+        .bp-main {
+
+            width: 330px;
+            height: 372px;
+            background-color: #fff;
+            margin-left: 100px;
+            text-align: center;
+            position: absolute;
+            top: 160px;
+            left: 120px;
+        }
+
+        .bp-main .vi {
+            width: 330px;
+            height: 372px;
+            margin-top: 50px;
+            margin-right: -1130;
+
+        }
+        .bp-main.v1 h3 {
+            color: #333;
+            margin-top: 32px;
+            font-size: 24px;
+        }
+        .bp-main.v1 .p1 {
+            margin-top: 8px;
+            color: #f19946;
+            font-size: 16px;
+            line-height: 1.3;
+            margin-bottom: 36px;
+        }
+        .bp-main .bp-unit {
+            width: 261px;
+            height: 44px;
+            background-color: #ffffff;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+        .bp-unit input {
+            padding: 12px 60px 10px 14px;
+            float: left;
+            border: none;
+            outline: none;
+            background-color: #f7f7f7;
+        }
+        .bp-main.v1 #bpArea {
+            width: 200px;
+            border-color: #f7f7f7;
+            font-size: 14px;
+            color: #333;
+        }
+        .bp-main.v1 .bp-unit .unit {
+            position: absolute;
+            right: 12px;
+            font-size: 16px;
+        }
+        .bp-unit .unit {
+            margin-top: 10px;
+            float: left;
+            color: #333;
+        }
+        .bp-main.v1 .bp-agg {
+            padding-left: 35px;
+            margin-top: 12px;
+            color: #999;
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+        }
+        .bdd-std {
+            float: left;
+            margin-top: 3px;
+            margin-right: 4px;
+        }
+        .bp-main.v1 button {
+            background: #52b16e;
+            width: 274px;
+            height: 44px;
+            line-height: 44px;
+            margin-left: 15px;
+            margin-top: 12px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+        }
+        .bp-main.v1 .bp-tips {
+            margin-top: 16px;
+            opacity: 0.5;
+            color: #999;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header header-nav">
+        <div class="header-first-box">
+            <div class="header-nav-first">
+                <div class="nav-first-left">
+                    <div class="city-switchover">
+                        <i class="icon icon-coordinate"></i>
+                        <span class="nav-city">郑州</span>
+                        <a class="nav-change" href="#">[切换]</a>
+                    </div>
+                </div>
+                <div class="nav-first-right">
+                    <a class="nav-first-login" href="#">登录</a>
+                    <a class="nav-first-reg" href="#">注册</a>
+                    <i class="cut-line cut-line-right"></i>
+                    <div class="nav-my-tubatu">
+                        <div class="nav-my-tubatu-title">
+                            我的土巴兔
+                            <i class="icon icon-arrow-bottom"></i>
+                        </div>
+                    </div>
+                    <i class="cut-line cut-line-right"></i>
+                    <div class="merchant-center">
+                        <div class="merchant-center-title">
+                            商家中心
+                            <i class="icon icon-arrow-bottom"></i>
+                        </div>
+                    </div>
+                    <i class="cut-line cut-line-right"></i>
+                    <div class="building-center">
+                        <div class="building-center-title">
+                            建材中心
+                            <i class="icon icon-arrow-bottom"></i>
+                        </div>
+                    </div>
+                    <i class="cut-line cut-line-right"></i>
+                    <a href="#">创作者中心</a>
+                    <i class="cut-line cut-line-right"></i>
+                    <a href="#">图满意云设计</a>
+                    <i class="cut-line cut-line-right"></i>
+                    <span class="nav-first-phone">
+                        <i class="icon icon-phone"></i>
+                        咨询热线:
+                        <span class="phone-underline">4006-900-288</span>
+                        <i class="icon tel-arrow down"></i>
+                        <i class="icon icon-arrow-bottom"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="header-nav-content">
+            <div class="header-nav-box">
+                <div class="nav-content-left">
+                    <div class="to8tu-logo-box">
+                        <a href="#" class="nav-fzlink"><i class="icon header-logo"></i></a>
+                        <a href="#" id="41eecbced794b2c8" class="ad-rabbit">
+                            <img src="https://pic50.t8tcdn.com/adcms/ad/815d5d2f160c31b148c6208bf7c37284.gif"
+                                class="header-logo-gif">
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-content-center">
+                    <ul class="nav-content-list">
+                        <li class="on">
+                            <a href="" class="bottom-thread nav-fzlink">首页</a>
+                        </li>
+                        <li class="have-arrow">
+                            <a href="" class="bottom-thread">
+                                效果图
+                                <i class="icon icon-arrow"></i>
+                            </a>
+                        </li>
+                        <li class="have-arrow">
+                            <a href="" class="bottom-thread nav-fzlink">
+                                装修公司
+                                <i class="icon icon-arrow"></i>
+                            </a>
+                        </li>
+                        <li class="have-arrow">
+                            <a href="" class="bottom-thread">
+                                装修攻略
+                                <i class="icon icon-arrow"></i>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="" class="bottom-thread">保障服务</a>
+                        </li>
+                        <li class="have-arrow">
+                            <a href="" class="bottom-thread">
+                                更多
+                                <i class="icon icon-arrow"></i>
+                            </a>
+                        </li>
+                        <li class="last-li">
+                            <a href="" class="bottom-thread">
+                                下载APP
+                                <i class="icon icon-app"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-content-right">
+                    <form action="#" id="searchform" class="nav-fzlink">
+                        <div class="nav-content-search-center">
+                            <div class="nav-search-input">
+                                <input type="text" class="nav-search-center-input">
+                                <label class="nav-search-center-text">搜装修公司/问题/攻略/效果图</label>
+                            </div>
+                            <i class="icon icon-search"></i>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="index-banner" id="index-banner-flag">
+            <a href="#" class="ad-data-report ad-data-report-carousel"><img src="./img/7.jpg" alt=""></a>
+            <a href="#" class="arrow-left">
+                <span class="banner-arrow"></span>
+            </a>
+            <a href="#" class="arrow-right">
+                <span class="banner-arrow"></span>
+            </a>
+        </div>
+        <div class="bp-body">
+            <div class="bp-main v1">
+                <h3>装修选半包还是全包好</h3>
+                <p class="p1">10秒估算一下</p>
+                <div class="bp-unit">
+                    <input type="text" id="bpArea" placeholder="请输入房屋面积">
+                    <i class="unit">㎡</i>
+                </div>
+                <div class="bp-unit">
+                    <input type="text" id="bpArea" placeholder="输入手机号获取报价结果">
+                </div>
+                <div class="bp-agg">
+                    <input type="checkbox" class="bdd-std">
+                    我已阅读并接受
+                    <a href="#" class="bdd-link">《隐私政策》</a>
+                    <a href="#" class="bdd-link">《服务条款》</a>
+                </div>
+                <button>获取报价</button>
+                <div class="bp-tips">报价后将会有装修顾问致电为您解读报价</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
